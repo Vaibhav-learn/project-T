@@ -5,18 +5,16 @@ class ProductCard(MDCard):
     image = StringProperty()
     name = StringProperty()
     price = StringProperty()
-    category = StringProperty()
     on_press_callback = ObjectProperty(None)
-    is_favorite = BooleanProperty(False)
-    on_favorite_toggle = ObjectProperty(None)
+    show_heart = BooleanProperty(False)
+    heart_filled = BooleanProperty(False)
+    heart_press_callback = ObjectProperty(None)
+    category = StringProperty('')
+    secondary_label = StringProperty('')
+    sold_out_text = StringProperty('')
 
     def on_touch_down(self, touch):
         if self.collide_point(*touch.pos):
             if self.on_press_callback:
                 self.on_press_callback(self)
-        return super().on_touch_down(touch)
-
-    def toggle_favorite(self):
-        self.is_favorite = not self.is_favorite
-        if self.on_favorite_toggle:
-            self.on_favorite_toggle(self, self.is_favorite) 
+        return super().on_touch_down(touch) 

@@ -48,7 +48,7 @@ class ProfileScreen(MDScreen):
         self.manager.current = 'help_center'
 
     def go_to_wishlist(self):
-        self.manager.current = 'wishlist'
+        print("Navigating to Wishlist")
 
     def go_to_terms(self):
         policy_screen = self.manager.get_screen('policy')
