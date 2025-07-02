@@ -1,0 +1,19 @@
+For Frontend:-
+Open terminal 
+Type this:
+   & "C:\Users\rocko\kivy_venv\Scripts\Activate.ps1"
+Then terminal Shows:
+(kivy_venv) PS C:\ME\Code\Python\Ayur app>
+Then type this to run code:
+python main.py
+
+
+
+For Backend:-
+In CMD prompt-
+cd "C:\Paatti Vaithiyapodi\backend"
+
+then-
+uvicorn main:app --reload
+
+
