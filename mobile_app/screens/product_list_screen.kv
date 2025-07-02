@@ -1,4 +1,5 @@
 #:kivy 2.0.0
+#:import ProductCard widgets.product_card.ProductCard
 
 <ProductListScreen>:
     name: 'product_list'
@@ -10,123 +11,22 @@
         spacing: 0
 
         # Top bar
-        MDBoxLayout:
-            orientation: 'horizontal'
-            size_hint_y: None
-            height: '56dp'
-            padding: '8dp', '0dp', '8dp', '0dp'
-            spacing: '8dp'
-            MDIconButton:
-                icon: 'arrow-left'
-                user_font_size: '28sp'
-                pos_hint: {'center_y': 0.5}
-                on_release: root.go_back() if hasattr(root, 'go_back') else None
-            # Search Bar
-            BoxLayout:
-                size_hint_y: None
-                height: '40dp'
-                spacing: '8dp'
-                padding: '0dp'
-                canvas.before:
-                    Color:
-                        rgba: 0.96, 0.96, 0.98, 1
-                    RoundedRectangle:
-                        pos: self.pos
-                        size: self.size
-                        radius: [20,]
-                TextInput:
-                    id: search_input
-                    hint_text: 'Search products'
-                    background_color: 0,0,0,0
-                    foreground_color: 0,0,0,1
-                    font_size: '15sp'
-                    padding: '16dp', '10dp'
-                    multiline: False
-                    size_hint_x: 1
-            MDIconButton:
-                icon: 'magnify'
-                user_font_size: '24sp'
-                pos_hint: {'center_y': 0.5}
-                on_release: root.open_search() if hasattr(root, 'open_search') else None
-            RelativeLayout:
-                size_hint_x: None
-                width: '40dp'
-                MDIconButton:
-                    icon: 'heart-outline'
-                    user_font_size: '24sp'
-                    pos_hint: {'center_y': 0.5}
-                    on_release: root.open_wishlist() if hasattr(root, 'open_wishlist') else None
-            RelativeLayout:
-                size_hint_x: None
-                width: '40dp'
-                MDIconButton:
-                    icon: 'shopping-outline'
-                    user_font_size: '24sp'
-                    pos_hint: {'center_y': 0.5}
-                    on_release: root.open_cart() if hasattr(root, 'open_cart') else None
+        MDTopAppBar:
+            title: "All Products"
+            elevation: 0
+            md_bg_color: 1, 1, 1, 1
+            specific_text_color: 0, 0, 0, 1
+            left_action_items: [["arrow-left", lambda x: root.go_back()]]
+            right_action_items: [["shopping-outline", lambda x: root.open_cart()]]
+
 
         # Product Grid
         ScrollView:
             do_scroll_x: False
             MDGridLayout:
+                id: product_grid
                 cols: 2
                 spacing: '8dp'
                 padding: '8dp', '8dp', '8dp', '8dp'
                 size_hint_y: None
-                height: self.minimum_height
-
-                # Product 1
-                ProductCard:
-                    image: root.products[0]['image']
-                    name: root.products[0]['name']
-                    price: root.products[0]['price']
-                    category: root.products[0]['category']
-                    secondary_label: 'MRP incl. of all taxes'
-                    show_heart: True
-                    heart_filled: root.wishlist[0]
-                    heart_press_callback: lambda *args: root.toggle_wishlist(1)
-
-                # Product 2
-                ProductCard:
-                    image: root.products[1]['image']
-                    name: root.products[1]['name']
-                    price: root.products[1]['price']
-                    category: root.products[1]['category']
-                    secondary_label: 'MRP incl. of all taxes'
-                    show_heart: True
-                    heart_filled: root.wishlist[1]
-                    heart_press_callback: lambda *args: root.toggle_wishlist(2)
-
-                # Product 3
-                ProductCard:
-                    image: root.products[2]['image']
-                    name: root.products[2]['name']
-                    price: root.products[2]['price']
-                    category: root.products[2]['category']
-                    secondary_label: 'MRP incl. of all taxes'
-                    show_heart: True
-                    heart_filled: root.wishlist[2]
-                    heart_press_callback: lambda *args: root.toggle_wishlist(3)
-
-                # Product 4 (Sold Out)
-                ProductCard:
-                    image: root.products[3]['image']
-                    name: root.products[3]['name']
-                    price: root.products[3]['price']
-                    category: root.products[3]['category']
-                    secondary_label: 'MRP incl. of all taxes'
-                    sold_out_text: 'Sold Out'
-                    show_heart: True
-                    heart_filled: root.wishlist[3]
-                    heart_press_callback: lambda *args: root.toggle_wishlist(4)
-
-                # Product 5
-                ProductCard:
-                    image: root.products[4]['image']
-                    name: root.products[4]['name']
-                    price: root.products[4]['price']
-                    category: root.products[4]['category']
-                    secondary_label: 'MRP incl. of all taxes'
-                    show_heart: True
-                    heart_filled: root.wishlist[4]
-                    heart_press_callback: lambda *args: root.toggle_wishlist(5)
+                height: self.minimum_height 

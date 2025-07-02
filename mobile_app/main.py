@@ -22,9 +22,9 @@ from screens.faq_category_detail_screen import FAQCategoryDetailScreen
 from screens.home_screen import HomeScreen
 from kivy.properties import StringProperty
 from kivymd.uix.screen import MDScreen
+from screens.search_screen import SearchScreen
 from screens.product_list_screen import ProductListScreen
 from screens.wishlist_screen import WishlistScreen
-from screens.search_screen import SearchScreen
 
 # Set window size for mobile-like experience
 Window.size = (400, 700)
@@ -36,6 +36,8 @@ class EcommerceApp(MDApp):
         self.theme_cls.primary_palette = "Green"
         self.theme_cls.accent_palette = "Teal"
         self.theme_cls.theme_style = "Light"
+        self.wishlist = [False] * 6  # Initialize for 6 products; adjust if your product list changes
+        self.last_screen = None
         
     def build(self):
         # Load all KV files
@@ -56,10 +58,9 @@ class EcommerceApp(MDApp):
         Builder.load_file('screens/FAQ_screen.kv')
         Builder.load_file('screens/faq_category_detail_screen.kv')
         Builder.load_file('screens/home_screen.kv')
+        Builder.load_file('screens/search_screen.kv')
         Builder.load_file('screens/product_list_screen.kv')
         Builder.load_file('screens/wishlist_screen.kv')
-        Builder.load_file('screens/search_screen.kv')
-        Builder.load_file('widgets/product_card.kv')
         # Create screen manager
         self.sm = ScreenManager()
         self.sm.add_widget(AccountPromptScreen(name='account_prompt'))
@@ -81,9 +82,9 @@ class EcommerceApp(MDApp):
         self.sm.add_widget(FAQScreen(name='FAQ'))
         self.sm.add_widget(FAQCategoryDetailScreen(name='faq_category_detail'))
         self.sm.add_widget(HomeScreen(name='home'))
+        self.sm.add_widget(SearchScreen(name='search'))
         self.sm.add_widget(ProductListScreen(name='product_list'))
         self.sm.add_widget(WishlistScreen(name='wishlist'))
-        self.sm.add_widget(SearchScreen(name='search'))
         self.sm.current = 'home'
         return self.sm
 

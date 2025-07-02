@@ -2,14 +2,14 @@
 
 <SearchScreen>:
     name: 'search'
-    md_bg_color: 1, 1, 1, 1
+    md_bg_color: 0.98, 0.98, 0.98, 1
 
     MDBoxLayout:
         orientation: 'vertical'
         padding: 0
         spacing: 0
 
-        # Top bar with search
+       # Top bar
         MDBoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
@@ -20,33 +20,54 @@
                 icon: 'arrow-left'
                 user_font_size: '28sp'
                 pos_hint: {'center_y': 0.5}
-                on_release: root.go_back()
-            TextInput:
-                id: search_input
-                hint_text: 'Search for products.'
-                background_color: 0,0,0,0
-                foreground_color: 0,0,0,1
-                font_size: '16sp'
-                padding: '8dp', '10dp'
-                multiline: False
-                size_hint_x: 1
+                on_release: root.go_back() 
+            # Search Bar
+            BoxLayout:
+                size_hint_y: None
+                height: '40dp'
+                spacing: '8dp'
+                padding: '0dp'
+                canvas.before:
+                    Color:
+                        rgba: 0.96, 0.96, 0.98, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [20,]
+                TextInput:
+                    id: search_input
+                    hint_text: 'Search products'
+                    background_color: 0,0,0,0
+                    foreground_color: 0,0,0,1
+                    font_size: '15sp'
+                    padding: '16dp', '10dp'
+                    multiline: False
+                    size_hint_x: 1
             MDIconButton:
                 icon: 'magnify'
                 user_font_size: '24sp'
                 pos_hint: {'center_y': 0.5}
-                on_release: root.show_results()
-
-        MDLabel:
-            text: 'Recent Searches'
-            font_size: '15sp'
-            color: 0.5, 0.5, 0.5, 1
-            bold: True
-            size_hint_y: None
-            height: self.texture_size[1] + dp(12)
-            md_bg_color: 0.95, 0.95, 0.97, 1
-            padding_x: '16dp'
+                on_release: root.open_search() 
+            RelativeLayout:
+                size_hint_x: None
+                width: '40dp'
+                MDIconButton:
+                    icon: 'heart-outline'
+                    user_font_size: '24sp'
+                    pos_hint: {'center_y': 0.5}
+                    on_release: root.open_wishlist() 
+            RelativeLayout:
+                size_hint_x: None
+                width: '40dp'
+                MDIconButton:
+                    icon: 'shopping-outline'
+                    user_font_size: '24sp'
+                    pos_hint: {'center_y': 0.5}
+                    on_release: root.open_cart() 
 
         ScrollView:
+            id: search_scroll
+            do_scroll_x: False
             MDList:
                 id: recent_list
 

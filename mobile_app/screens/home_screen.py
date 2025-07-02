@@ -32,6 +32,11 @@ class HomeScreen(MDScreen):
     def open_search(self):
         if self.manager:
             self.manager.current = 'search'
+    # open wishlist screen
+    def open_wishlist(self):
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'wishlist'
 
     def switch_tab(self, tab_name):
         self.active_tab = tab_name

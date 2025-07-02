@@ -30,28 +30,24 @@
                 user_font_size: '28sp'
                 pos_hint: {'center_y': 0.5}
                 on_release: root.open_search() if hasattr(root, 'open_search') else None
-            Widget:
-                size_hint_x: None
-                width: '4dp'
+            
             RelativeLayout:
                 size_hint_x: None
-                width: '48dp'
+                width: '40dp'
+                MDIconButton:
+                    icon: 'heart-outline'
+                    user_font_size: '24sp'
+                    pos_hint: {'center_y': 0.5}
+                    on_release: root.open_wishlist() 
+            RelativeLayout:
+                size_hint_x: None
+                width: '40dp'
                 MDIconButton:
                     icon: 'shopping-outline'
                     user_font_size: '28sp'
                     pos_hint: {'center_y': 0.5}
                     on_release: root.open_cart()
-                MDLabel:
-                    text: ''
-                    size_hint: None, None
-                    size: '12dp', '12dp'
-                    pos_hint: {'center_x': 0.7, 'center_y': 0.8}
-                    canvas.before:
-                        Color:
-                            rgba: 0.2, 0.8, 0.2, 1
-                        Ellipse:
-                            pos: self.pos
-                            size: self.size
+              
 
         # Scrollable main content
         ScrollView:
