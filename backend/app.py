@@ -7,8 +7,7 @@ from routes.wishlist_routes import wishlist_bp
 app = Flask(__name__)
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config.from_pyfile('config.py')
 
 db.init_app(app)
 

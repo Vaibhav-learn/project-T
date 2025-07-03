@@ -1,4 +1,6 @@
-flask
-flask_sqlalchemy
-flask_cors
-#dependencies
+Flask
+Flask-SQLAlchemy
+Flask-JWT-Extended  # if you add auth
+Flask-CORS
+Flask-Migrate
+pytest

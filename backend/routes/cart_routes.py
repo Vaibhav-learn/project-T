@@ -7,10 +7,14 @@ cart_bp = Blueprint('cart', __name__)
 @cart_bp.route('/cart', methods=['POST'])
 def add_to_cart():
     data = request.json
-    item = Cart(user_id=data['user_id'], product_id=data['product_id'], quantity=data.get('quantity', 1))
-    db.session.add(item)
+    existing_item = Cart.query.filter_by(user_id=data['user_id'], product_id=data['product_id']).first()
+    if existing_item:
+        existing_item.quantity += data.get('quantity', 1)
+    else:
+        new_item = Cart(user_id=data['user_id'], product_id=data['product_id'], quantity=data.get('quantity', 1))
+        db.session.add(new_item)
     db.session.commit()
-    return jsonify({'message': 'Item added to cart'}), 201
+    return jsonify({'message': 'Cart updated'}), 200
 
 @cart_bp.route('/cart/<int:user_id>', methods=['GET'])
 def get_cart(user_id):

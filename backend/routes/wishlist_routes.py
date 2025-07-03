@@ -7,6 +7,9 @@ wishlist_bp = Blueprint('wishlist', __name__)
 @wishlist_bp.route('/wishlist', methods=['POST'])
 def add_to_wishlist():
     data = request.json
+    exists = Wishlist.query.filter_by(user_id=data['user_id'], product_id=data['product_id']).first()
+    if exists:
+        return jsonify({'message': 'Item already in wishlist'}), 200
     item = Wishlist(user_id=data['user_id'], product_id=data['product_id'])
     db.session.add(item)
     db.session.commit()
