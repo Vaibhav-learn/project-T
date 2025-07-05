@@ -16,4 +16,4 @@ class AyurApp(App):
         return sm
 
 if __name__ == '__main__':
-    AyurApp().run()
+    AyurApp().run() 
