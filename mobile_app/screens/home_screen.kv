@@ -64,7 +64,7 @@
                     md_bg_color: 0.0, 0.6, 0.3, 1
                     padding: '8dp', '0dp'
                     MDLabel:
-                        text: 'Get 10% additional cashback as TSS Points on your order'
+                        text: 'Get 10% discount on your first purchase'
                         halign: 'center'
                         color: 1, 1, 1, 1
                         font_size: '14sp'
@@ -76,19 +76,31 @@
                     size_hint_y: None
                     height: '220dp'
                     Image:
-                        source: 'assets/banner1.png'
+                        source: 'assets/Banners/banner1.png'
                         allow_stretch: True
                         keep_ratio: False
                     Image:
-                        source: 'assets/banner2.png'
+                        source: 'assets/Banners/banner2.png'
                         allow_stretch: True
                         keep_ratio: False
                     Image:
-                        source: 'assets/banner3.png'
+                        source: 'assets/Banners/banner3.png'
                         allow_stretch: True
                         keep_ratio: False
                     Image:
-                        source: 'assets/banner4.png'
+                        source: 'assets/Banners/banner4.png'
+                        allow_stretch: True
+                        keep_ratio: False
+                    Image:
+                        source: 'assets/Banners/banner5.jpg'
+                        allow_stretch: True
+                        keep_ratio: False
+                    Image:
+                        source: 'assets/Banners/banner6.jpg'
+                        allow_stretch: True
+                        keep_ratio: False
+                    Image:
+                        source: 'assets/Banners/banner7.jpg'
                         allow_stretch: True
                         keep_ratio: False
 
@@ -103,259 +115,14 @@
                     height: self.texture_size[1] + dp(16)
                     padding_x: '16dp'
 
-                # Product Grid
+                # Product Grid (dynamic)
                 GridLayout:
+                    id: home_product_grid
                     cols: 2
                     spacing: '8dp'
                     padding: '8dp', '0dp', '8dp', '0dp'
                     size_hint_y: None
                     height: self.minimum_height
-                    # Product 1
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: '290dp'
-                        padding: '8dp'
-                        spacing: '4dp'
-                        Image:
-                            source: 'assets/product1.png'
-                            allow_stretch: True
-                            keep_ratio: False
-                        MDLabel:
-                            text: 'Pure Karisalankanni Oil'
-                            font_size: '15sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'Herbal oils & Legiyams'
-                            font_size: '13sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: '₹2,120.00'
-                            font_size: '14sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'MRP incl. of all taxes'
-                            font_size: '11sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                    # Product 2
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: '290dp'
-                        padding: '8dp'
-                        spacing: '4dp'
-                        Image:
-                            source: 'assets/my_avatar.png'
-                            allow_stretch: True
-                            keep_ratio: False
-                        MDLabel:
-                            text: 'Solids: Classic Black'
-                            font_size: '15sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'Women Boxer Shorts'
-                            font_size: '13sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: '₹499'
-                            font_size: '14sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'MRP incl. of all taxes'
-                            font_size: '11sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                    # Product 3
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: '290dp'
-                        padding: '8dp'
-                        spacing: '4dp'
-                        Image:
-                            source: 'assets/logo1.png'
-                            allow_stretch: True
-                            keep_ratio: False
-                        MDLabel:
-                            text: 'Graphic Tee: Urban'
-                            font_size: '15sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'Men Regular T-shirt'
-                            font_size: '13sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: '₹699'
-                            font_size: '14sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'MRP incl. of all taxes'
-                            font_size: '11sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                    # Product 4
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: '290dp'
-                        padding: '8dp'
-                        spacing: '4dp'
-                        Image:
-                            source: 'assets/leaf.png'
-                            allow_stretch: True
-                            keep_ratio: False
-                        MDLabel:
-                            text: 'Leaf Print Shorts'
-                            font_size: '15sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'Casual Beachwear'
-                            font_size: '13sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: '₹899'
-                            font_size: '14sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'MRP incl. of all taxes'
-                            font_size: '11sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                    # Product 5
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: '290dp'
-                        padding: '8dp'
-                        spacing: '4dp'
-                        Image:
-                            source: 'assets/google_icon.png'
-                            allow_stretch: True
-                            keep_ratio: False
-                        MDLabel:
-                            text: 'Google Icon Tee'
-                            font_size: '15sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'Developer Collection'
-                            font_size: '13sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: '₹599'
-                            font_size: '14sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'MRP incl. of all taxes'
-                            font_size: '11sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                    # Product 6
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: '290dp'
-                        padding: '8dp'
-                        spacing: '4dp'
-                        Image:
-                            source: 'assets/logo3.png'
-                            allow_stretch: True
-                            keep_ratio: False
-                        MDLabel:
-                            text: 'Classic Logo Sweatshirt'
-                            font_size: '15sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'Winter Collection'
-                            font_size: '13sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: '₹1499'
-                            font_size: '14sp'
-                            halign: 'left'
-                            bold: True
-                            color: 0.2, 0.2, 0.2, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
-                        MDLabel:
-                            text: 'MRP incl. of all taxes'
-                            font_size: '11sp'
-                            halign: 'left'
-                            color: 0.5, 0.5, 0.5, 1
-                            size_hint_y: None
-                            height: self.texture_size[1]
 
                 # Innovation Lab Section
                 MDLabel:
@@ -391,7 +158,7 @@
                             radius: [15,]
                             md_bg_color: 1, 1, 1, 1
                             Image:
-                                source: 'assets/leaf.png'
+                                source: 'assets/Innovation Cards/Innovation Card 1.jpeg'
                                 allow_stretch: True
                                 keep_ratio: False
                                 size_hint_y: 1
@@ -404,7 +171,20 @@
                             radius: [15,]
                             md_bg_color: 1, 1, 1, 1
                             Image:
-                                source: 'assets/logo1.png'
+                                source: 'assets/Innovation Cards/Innovation Card 2.jpeg'
+                                allow_stretch: True
+                                keep_ratio: False
+                                size_hint_y: 1
+                        # Innovation Card 3
+                        MDCard:
+                            orientation: 'vertical'
+                            size_hint: None, None
+                            size: '200dp', '200dp'
+                            padding: '0dp'
+                            radius: [15,]
+                            md_bg_color: 1, 1, 1, 1
+                            Image:
+                                source: 'assets/Innovation Cards/Innovation Card 3.jpeg'
                                 allow_stretch: True
                                 keep_ratio: False
                                 size_hint_y: 1
@@ -494,8 +274,8 @@
         MDBoxLayout:
             orientation: "horizontal"
             size_hint_y: None
-            height: "80dp"
-            padding: "0dp", "0dp", "0dp", "12dp"
+            height: "70dp"
+            padding: "0dp", "0dp", "0dp", "10dp"
             spacing: "0dp"
             md_bg_color: 1, 1, 1, 1
             canvas.before:
@@ -504,29 +284,40 @@
                 Rectangle:
                     pos: self.x, self.top - 1
                     size: self.width, 1
+
             Widget:
-                size_hint_x: 1
+                size_hint_x: 2
+
             MDIconButton:
-                icon: "home"
+                icon: "home-outline"
                 theme_text_color: "Custom"
                 text_color: (0.2, 0.8, 0.2, 1) if root.active_tab == "home" else (0.7, 0.7, 0.7, 1)
-                user_font_size: "40sp"
+                user_font_size: "36sp"
                 pos_hint: {"center_y": 0.5}
                 on_release: root.switch_tab("home")
+
+            Widget:
+                size_hint_x: 3
+
             MDIconButton:
                 icon: "format-list-bulleted"
                 theme_text_color: "Custom"
-                text_color: (0.2, 0.8, 0.2, 1) if root.active_tab == "list" else (0.7, 0.7, 0.7, 1)
-                user_font_size: "40sp"
+                text_color: (0.7, 0.7, 0.7, 1)
+                user_font_size: "36sp"
                 pos_hint: {"center_y": 0.5}
                 on_release: root.switch_tab("list")
+
+            Widget:
+                size_hint_x: 3
+
             MDIconButton:
-                icon: "account-circle-outline"
+                icon: "account-outline"
                 theme_text_color: "Custom"
-                text_color: (0.2, 0.8, 0.2, 1) if root.active_tab == "profile" else (0.7, 0.7, 0.7, 1)
-                user_font_size: "40sp"
+                text_color: (0.7, 0.7, 0.7, 1)
+                user_font_size: "36sp"
                 pos_hint: {"center_y": 0.5}
                 on_release: root.switch_tab("profile")
+
             Widget:
-                size_hint_x: 1 
+                size_hint_x: 2 
                 

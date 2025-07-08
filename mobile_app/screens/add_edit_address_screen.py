@@ -33,4 +33,12 @@ class AddEditAddressScreen(MDScreen):
                 saved_addresses_screen.addresses.append(address_obj)
             saved_addresses_screen.addresses = saved_addresses_screen.addresses  # Force update
             saved_addresses_screen.update_addresses_list()
+        # Track navigation history for stepper/confirm logic
+        try:
+            from kivy.app import App
+            app = App.get_running_app()
+            if hasattr(app, 'prev_screen') and app.prev_screen == 'cart':
+                app.last_screen = 'cart'
+        except Exception:
+            pass
         self.manager.current = 'saved_addresses' 

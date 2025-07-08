@@ -24,10 +24,12 @@ class WishlistScreen(MDScreen):
             grid.add_widget(MDLabel(text='No items in wishlist', halign='center', font_style='H6', size_hint_y=None, height='40dp'))
             return
         for product in products:
+            # Convert price to string if it's numeric
+            price_str = str(product['price']) if isinstance(product['price'], (int, float)) else product['price']
             card = ProductCard(
                 image=product['image'],
                 name=product['name'],
-                price=product['price'],
+                price=price_str,
                 category=product.get('category', ''),
                 is_favorite=True,
                 on_favorite_toggle=lambda card, fav, name=product['name']: self.remove_from_wishlist(name) if not fav else None
@@ -39,17 +41,20 @@ class WishlistScreen(MDScreen):
 
     def remove_from_wishlist(self, product_name):
         app = App.get_running_app()
-        product_list_screen = self.manager.get_screen('product_list')
-        product_list_screen.remove_from_wishlist_by_name(product_name)
-        # Refresh the wishlist
-        wishlist_products = [p for p, w in zip(product_list_screen.products, app.wishlist) if w]
-        self.set_wishlist(wishlist_products)
+        # Remove from wishlist by name
+        app.wishlist = [item for item in app.wishlist if item['name'] != product_name]
+        # Refresh the wishlist display
+        self.set_wishlist(app.wishlist)
 
     def on_pre_enter(self, *args):
         app = App.get_running_app()
         # Track the previous screen
         if self.manager:
             self.previous_screen = self.manager.current_screen.name if self.manager.current_screen.name != 'wishlist' else self.previous_screen
-        product_list_screen = self.manager.get_screen('product_list')
-        wishlist_products = [p for p, w in zip(product_list_screen.products, app.wishlist) if w]
-        self.set_wishlist(wishlist_products) 
+        # Display wishlist items directly from app.wishlist
+        self.set_wishlist(app.wishlist)
+
+    def open_cart(self):
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'cart' 

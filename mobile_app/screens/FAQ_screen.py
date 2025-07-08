@@ -1,5 +1,6 @@
 from kivymd.uix.screen import MDScreen
 from kivy.properties import StringProperty
+from kivy.app import App
 
 class FAQScreen(MDScreen):
     previous_screen = StringProperty('profile')
@@ -8,7 +9,9 @@ class FAQScreen(MDScreen):
         self.manager.current = self.previous_screen
 
     def open_cart(self):
-        print("Cart pressed")
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'cart'
 
     def open_FAQ(self, FAQ_type):
         category_faqs = {

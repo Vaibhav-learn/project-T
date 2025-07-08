@@ -62,6 +62,11 @@ class ProfileScreen(MDScreen):
         faq_screen.previous_screen = 'profile'
         self.manager.current = 'FAQ'
 
+    def go_to_cart(self):
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'cart'
+
     def switch_tab(self, tab_name):
         self.active_tab = tab_name
         if tab_name == "home":
@@ -75,13 +80,12 @@ class AccountPromptScreen(MDScreen):
     active_tab = StringProperty("profile")
 
     def go_to_login(self):
+        app = App.get_running_app()
+        app.last_screen = 'account_prompt'
         self.manager.current = 'login'
 
     def go_to_notification_settings(self):
         self.manager.current = 'notification'
-
-    def go_to_select_language(self):
-        pass
 
     def go_to_help_center(self):
         self.manager.current = 'help_center'

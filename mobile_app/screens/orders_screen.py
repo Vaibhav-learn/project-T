@@ -5,6 +5,7 @@ from kivymd.uix.label import MDLabel
 from kivymd.uix.button import MDRaisedButton
 from kivy.uix.image import Image
 from kivymd.uix.toolbar import MDTopAppBar
+from kivy.app import App
 
 class OrdersScreen(MDScreen):
     def __init__(self, **kwargs):
@@ -68,6 +69,11 @@ class OrdersScreen(MDScreen):
     
     def go_back(self):
         self.manager.current = 'profile'
+    
+    def open_cart(self):
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'cart'
 
 class OrderCard(MDCard):
     def __init__(self, order_data, **kwargs):
