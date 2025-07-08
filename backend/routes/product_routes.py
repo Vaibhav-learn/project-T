@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from controllers.product_controllers import add_product, get_products, update_product, delete_product
+from controllers.product_controller import add_product, get_products, update_product, delete_product
 
 product_bp = Blueprint('products', __name__, url_prefix='/')
 
