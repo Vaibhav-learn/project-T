@@ -1,5 +1,5 @@
-from flask import Flask
-from flask_cors import CORS
+from flask import Flask # type: ignore
+from flask_cors import CORS # type: ignore
 from database import db
 from routes.cart_routes import cart_bp
 from routes.wishlist_routes import wishlist_bp

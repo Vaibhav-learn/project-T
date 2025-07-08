@@ -1,5 +1,5 @@
-from flask import Blueprint, request, jsonify
-from models.wishlist_model import Wishlist
+from flask import Blueprint, request, jsonify # type: ignore
+from models.wishlist_model import Wishlist # type: ignore
 from database import db
 
 wishlist_bp = Blueprint('wishlist', __name__)

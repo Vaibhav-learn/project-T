@@ -1,5 +1,5 @@
-from flask import Blueprint, request, jsonify
-from models.cart_model import Cart
+from flask import Blueprint, request, jsonify  # type: ignore
+from models.cart_model import Cart  # type: ignore
 from database import db
 
 cart_bp = Blueprint('cart', __name__)
