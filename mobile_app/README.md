@@ -23,7 +23,7 @@ A modern and sleek user profile section for a mobile e-commerce application buil
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Rajiv-Ranjan-341/<repository-name>.git
 cd <repository-name>
 ```
 
