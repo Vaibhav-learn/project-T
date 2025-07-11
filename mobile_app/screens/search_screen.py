@@ -5,6 +5,7 @@ from kivy.lang import Builder
 from kivy.uix.textinput import TextInput
 from widgets.product_card import ProductCard
 from kivy.app import App
+from functools import partial
 
 class SearchScreen(MDScreen):
     recent_searches = ListProperty([])
@@ -67,7 +68,8 @@ class SearchScreen(MDScreen):
                     idx = product_list_screen.products.index(product)
                 except ValueError:
                     idx = -1
-                is_favorite = App.get_running_app().wishlist[idx] if idx != -1 else False
+                # Check if product is in wishlist by name
+                is_favorite = any(item['name'] == product['name'] for item in App.get_running_app().wishlist)
                 def make_favorite_callback(idx):
                     return lambda card, fav: product_list_screen.toggle_wishlist(idx, fav)
                 card = ProductCard(
@@ -76,9 +78,10 @@ class SearchScreen(MDScreen):
                     price=product['price'],
                     category=product.get('category', ''),
                     is_favorite=is_favorite,
-                    on_favorite_toggle=make_favorite_callback(idx) if idx != -1 else None,
-                    on_press_callback=lambda c, n=product['name']: self.open_product_detail(n)
+                    on_favorite_toggle=make_favorite_callback(idx) if idx != -1 else None
                 )
+                card.on_press_callback = partial(self.open_product_detail, product['name'])
+                # print("search card on_press_callback for", product['name'], "is", card.on_press_callback)  # DEBUG
                 self.search_grid.add_widget(card)
             # Center single product in grid
             if len(matches) == 1:
@@ -86,8 +89,22 @@ class SearchScreen(MDScreen):
                 self.search_grid.add_widget(Widget())
 
     def open_product_detail(self, product_name):
-        # Placeholder for navigation to product detail page
-        print(f'Navigate to product detail for: {product_name}') 
+        print(f"open_product_detail called for: {product_name}")  # DEBUG
+        app = App.get_running_app()
+        app.last_screen = self.manager.current
+        product_list_screen = self.manager.get_screen('product_list')
+        # Find the product dict by name
+        product = next((p for p in product_list_screen.products if p['name'] == product_name), None)
+        if product:
+            details_screen = app.sm.get_screen('product_details')
+            details_screen.set_product(
+                name=product['name'],
+                price=float(product['price'].replace('₹','').replace(',','').replace('.00','')) if isinstance(product['price'], str) else product['price'],
+                images=product.get('images', [product.get('image', '')]),
+                description=product.get('description', 'No description available.'),
+                category=product.get('category', '')
+            )
+            app.sm.current = 'product_details'
 
     def open_wishlist(self):
         app = App.get_running_app()
@@ -95,9 +112,6 @@ class SearchScreen(MDScreen):
         app.root.current = 'wishlist'
 
     def open_cart(self):
-        """
-        Navigates to the cart screen.
-        """
-        print('Open cart')
-        # app = App.get_running_app()
-        # app.root.current = 'cart'
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'cart'

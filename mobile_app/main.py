@@ -25,6 +25,11 @@ from kivymd.uix.screen import MDScreen
 from screens.search_screen import SearchScreen
 from screens.product_list_screen import ProductListScreen
 from screens.wishlist_screen import WishlistScreen
+from screens.category_screen import CategoryScreen
+from screens.cart_screen import CartScreen
+from screens.product_details_screen import ProductDetailsScreen
+from screens.order_summary_screen import OrderSummaryScreen
+from screens.payment_screen import PaymentScreen
 
 # Set window size for mobile-like experience
 Window.size = (400, 700)
@@ -36,8 +41,9 @@ class EcommerceApp(MDApp):
         self.theme_cls.primary_palette = "Green"
         self.theme_cls.accent_palette = "Teal"
         self.theme_cls.theme_style = "Light"
-        self.wishlist = [False] * 6  # Initialize for 6 products; adjust if your product list changes
+        self.wishlist = []  # Initialize as empty list to store wishlist items
         self.last_screen = None
+        self.cart = []  # List to store cart items
         
     def build(self):
         # Load all KV files
@@ -61,6 +67,11 @@ class EcommerceApp(MDApp):
         Builder.load_file('screens/search_screen.kv')
         Builder.load_file('screens/product_list_screen.kv')
         Builder.load_file('screens/wishlist_screen.kv')
+        Builder.load_file('screens/category_screen.kv')
+        Builder.load_file('screens/cart_screen.kv')
+        Builder.load_file('screens/product_details_screen.kv')
+        Builder.load_file('screens/order_summary_screen.kv')
+        Builder.load_file('screens/payment_screen.kv')
         # Create screen manager
         self.sm = ScreenManager()
         self.sm.add_widget(AccountPromptScreen(name='account_prompt'))
@@ -85,6 +96,11 @@ class EcommerceApp(MDApp):
         self.sm.add_widget(SearchScreen(name='search'))
         self.sm.add_widget(ProductListScreen(name='product_list'))
         self.sm.add_widget(WishlistScreen(name='wishlist'))
+        self.sm.add_widget(CategoryScreen(name='category'))
+        self.sm.add_widget(CartScreen(name='cart'))
+        self.sm.add_widget(ProductDetailsScreen(name='product_details'))
+        self.sm.add_widget(OrderSummaryScreen(name='order_summary'))
+        self.sm.add_widget(PaymentScreen(name='payment'))
         self.sm.current = 'home'
         return self.sm
 
@@ -124,6 +140,11 @@ OrderItem:
 
     def go_back(self):
         self.manager.current = 'profile'
+
+    # def open_cart(self):
+    #     app = App.get_running_app()
+    #     app.last_screen = self.manager.current_screen.name
+    #     self.manager.current = 'cart'
 
 if __name__ == '__main__':
     EcommerceApp().run() 

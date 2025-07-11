@@ -11,12 +11,159 @@ Builder.load_file('widgets/product_card.kv')
 
 class ProductListScreen(MDScreen):
     products = ListProperty([
-        {'name': 'Urban Blaze: Lavender', 'category': 'Women Low Top Sneakers', 'price': '₹2599', 'image': 'assets/product1.png'},
-        {'name': 'Pure Karisalankanni Oil', 'category': 'Herbal oils & Legiyams', 'price': '₹2,120.00', 'image': 'assets/product2.png'},
-        {'name': 'Solids: Classic Black', 'category': 'Women Boxer Shorts', 'price': '₹499', 'image': 'assets/my_avatar.png'},
-        {'name': 'Graphic Tee: Urban', 'category': 'Men Regular T-shirt', 'price': '₹699', 'image': 'assets/logo1.png'},
-        {'name': 'Leaf Print Shorts', 'category': 'Casual Beachwear', 'price': '₹899', 'image': 'assets/leaf.png'},
-        {'name': 'Classic Logo Sweatshirt', 'category': 'Winter Collection', 'price': '₹1499', 'image': 'assets/logo3.png'},
+        # Herbal oils & Legiyams
+        {
+            'name': 'Sathuragiri Joint Pain Thailam 60g',
+            'category': 'Herbal Oils & Legiyams',
+            'price': '₹300',
+            'image': 'assets/herbal oils/2.jpg',  
+            'images': ['assets/herbal oils/2.jpg'],
+            'description': 'Anti-inflammatory, soothes joints, lubricates and strengthens muscles'
+        },
+        {
+            'name': 'Karisalankanni Oil 90g',
+            'category': 'Herbal Oils & Legiyams',
+            'price': '₹300',
+            'image': 'assets/herbal oils/7.png',  
+            'images': ['assets/herbal oils/7.png'],
+            'description': 'Herbal oil for hair health; popular top-seller'
+        },
+        {
+            'name': 'Karisalankanni Oil 180ml',
+            'category': 'Herbal Oils & Legiyams',
+            'price': '₹400',
+            'image': 'assets/herbal oils/7.png',  # Placeholder image
+            'images': ['assets/herbal oils/7.png'],
+            'description': 'Larger bottle of the same nourishing hair oil'
+        },
+        {
+            'name': 'Karunjeeragam Oil 50ml',
+            'category': 'Herbal Oils & Legiyams',
+            'price': '₹180',
+            'image': 'assets/herbal oils/6.jpg',  # Placeholder image
+            'images': ['assets/herbal oils/6.jpg'],
+            'description': 'Herbal oil made from black cumin seeds'
+        },
+        {
+            'name': 'Prasava Legiyam 500g',
+            'category': 'Herbal Oils & Legiyams',
+            'price': '₹220',
+            'image': 'assets/herbal oils/8.jpg',  # Placeholder image
+            'images': ['assets/herbal oils/8.jpg'],
+            'description': 'Post-partum tonic for anemia, edema, vomiting; strengthens uterus'
+        },
+        {
+            'name': 'Kaayakalpaa Kit',
+            'category': 'Herbal oils & Legiyams',
+            'price': '₹3,599',
+            'image': 'assets/herbal oils/1.png',
+            'images': ['assets/herbal oils/1.png'],
+            'description': 'A rejuvenating herbal kit for daily wellness and vitality.'
+        },
+        {
+            'name': 'Pure Karisalankanni Oil 225ml',
+            'category': 'Herbal oils & Legiyams',
+            'price': '₹2,120.00',
+            'image': 'assets/herbal oils/7.png',
+            'images': ['assets/herbal oils/7.png', 'assets/herbal oils/7.png', 'assets/herbal oils/7.png'],
+            'description': (
+                "This oil comes from a plant known in English as 'false daisy.' The herb is in the sunflower family and grows best in moist places including Thailand, India, and Brazil.\n"
+                "Preparation:\n"
+                "STEP-1: Equal quantities of nallennai, cow's milk and the powder are taken.\n"
+                "STEP-2: The leaves of Karisalankanni plant are grinded in a mixer.\n"
+                "STEP-3: Nallennai and cow's milk are added to the powder acheived.\n"
+                "STEP-4: Boiling the three (Karisalankanni, Nallennai, Cow's milk) for 20 minutes in a stove. Thus, Karisalankanni oil is prepared."
+            )
+        },
+        {
+            'name': 'Eucalyptus Oil',
+            'category': 'Herbal oils & Legiyams',
+            'price': '₹200',
+            'image': 'assets/herbal oils/4.jpg',
+            'images': ['assets/herbal oils/4.jpg'],
+            'description': 'Natural eucalyptus oil for soothing relief and aromatherapy.'
+        },
+    #   Baby Care
+        {
+            'name': 'Kaasi Katti (10g)',
+            'category': 'Baby Care',
+            'price': '₹30',
+            'image': 'assets/baby care images/5.jpg',
+            'images': ['assets/baby care images/5.jpg'],
+            'description': 'Traditional herbal chunk used for baby care—specific benefits not detailed.'
+        },
+        {
+            'name': 'Black Bindi for Babies (1 piece)',
+            'category': 'Baby Care',
+            'price': '₹100',
+            'image': 'assets/baby care images/13.jpg',
+            'images': ['assets/baby care images/13.jpg'],
+            'description': 'Protective black dot applied on baby\'s forehead to ward off negative energy; safe with no skin allergies'
+        },
+        {
+            'name': 'Pillaivalathi Leaf (20g)',
+            'category': 'Baby Care',
+            'price': '₹100',
+            'image': 'assets/baby care images/8.jpg',
+            'images': ['assets/baby care images/8.jpg'],
+            'description': 'Herbal leaf for baby use—detailed benefits not provided in listing.'
+        },
+        {
+            'name': 'Vasambu Bangle (1 piece)',
+            'category': 'Baby Care',
+            'price': '₹60',
+            'image': 'assets/baby care images/12.jpg',
+            'images': ['assets/baby care images/12.jpg'],
+            'description': 'A vasambu (sweetflag) root bracelet to calm babies, aid digestion, improve sleep, and offer protection'
+        },
+        {
+            'name': 'Muligai Saampirani Set (100g)',
+            'category': 'Baby Care',
+            'price': '₹120',
+            'image': 'assets/baby care images/9.jpg',
+            'images': ['assets/baby care images/9.jpg'],
+            'description': 'Herbal incense/resin set; baby-centric uses not explicitly described on listing.'
+        },
+        {
+            'name': 'Spiked Ginger Lily (100g)',
+            'category': 'Baby Care',
+            'price': '₹120',
+            'image': 'assets/baby care images/2.jpg',
+            'images': ['assets/baby care images/2.jpg'],
+            'description': 'Dried rhizome (Poolankizhangu); typically used for digestive and calming purposes in infants.'
+        },
+        {
+            'name': 'Urasu / Orasu Medicine (1 set)',
+            'category': 'Baby Care',
+            'price': '₹60',
+            'image': 'assets/baby care images/7.jpg',
+            'images': ['assets/baby care images/7.jpg'],
+            'description': 'Traditional herbal remedy ("orasu") made for infants; exact usage not specified.'
+        },
+        {
+            'name': 'Kaadhola / Kaadholai Karugamani (1 set)',
+            'category': 'Baby Care',
+            'price': '₹60',
+            'image': 'assets/baby care images/4.jpg',
+            'images': ['assets/baby care images/4.jpg'],
+            'description': 'Herbal thorn-berry remedy ("karugamani"); intended for baby wellness but specific benefits not listed.'
+        },
+        {
+            'name': 'Vasambu / Sweetflag (2 pieces)',
+            'category': 'Baby Care',
+            'price': '₹20',
+            'image': 'assets/baby care images/11.jpg',
+            'images': ['assets/baby care images/11.jpg'],
+            'description': 'Raw vasambu sticks commonly used as natural teething aids, to support digestion, and soothe ailments.'
+        },
+        {
+            'name': 'Baby Care Combo (1 set)',
+            'category': 'Baby Care',
+            'price': '₹550',
+            'image': 'assets/baby care images/1.jpg',
+            'images': ['assets/baby care images/1.jpg'],
+            'description': 'A curated combo containing Orasu Marundhu, Paalkayam, Kadukkai, Jathikkai, Maasakkai, Vasambu, and Kaadhola Karugamani—formulated for infants\' overall health.'
+        },
     ])
 
     def on_pre_enter(self, *args):
@@ -27,11 +174,9 @@ class ProductListScreen(MDScreen):
         and populates the product grid.
         """
         app = App.get_running_app()
+        # Ensure wishlist is initialized as a list
         if not hasattr(app, 'wishlist'):
-            app.wishlist = [False] * len(self.products)
-        elif len(app.wishlist) != len(self.products):
-            old_wishlist = app.wishlist
-            app.wishlist = [old_wishlist[i] if i < len(old_wishlist) else False for i in range(len(self.products))]
+            app.wishlist = []
         self.show_products(self.products)
         # Bind search bar events
         search_input = self.ids.get('search_input')
@@ -57,6 +202,9 @@ class ProductListScreen(MDScreen):
         self.filter_products_by_search(value)
 
     def show_products(self, products_to_show=None):
+        search_input = self.ids.get('search_input')
+        if search_input:
+            search_input.focus = False
         """
         Populates the product grid with a given list of products. If None, shows all products.
         """
@@ -65,17 +213,20 @@ class ProductListScreen(MDScreen):
         grid.clear_widgets()
         grid.cols = 2
         products = products_to_show if products_to_show is not None else self.products
-        for idx, product in enumerate(self.products):
-            if product not in products:
-                continue
+        for product in products:
+            idx = self.products.index(product)
+            # Check if product is in wishlist by name
+            is_favorite = any(item['name'] == product['name'] for item in app.wishlist)
             card = ProductCard(
                 image=product['image'],
                 name=product['name'],
                 category=product.get('category', ''),
                 price=product['price'],
-                is_favorite=app.wishlist[idx],
+                is_favorite=is_favorite,
                 on_favorite_toggle=self.make_favorite_callback(idx)
             )
+            card.on_press_callback = partial(self.open_product_details, product)
+            # print("on_press_callback for", product['name'], "is", card.on_press_callback)  # DEBUG
             grid.add_widget(card)
 
     def filter_products_by_search(self, search_text):
@@ -96,9 +247,25 @@ class ProductListScreen(MDScreen):
         return lambda card, fav: self.toggle_wishlist(idx, fav)
 
     def toggle_wishlist(self, idx, is_favorite):
-        print(f"toggle_wishlist called for idx={idx}, is_favorite={is_favorite}")  # DEBUG
+        # print(f"toggle_wishlist called for idx={idx}, is_favorite={is_favorite}")  # DEBUG
         app = App.get_running_app()
-        app.wishlist[idx] = is_favorite
+        product = self.products[idx]
+        
+        if is_favorite:
+            # Add to wishlist
+            wishlist_item = {
+                'name': product['name'],
+                'image': product['image'],
+                'price': product['price'],
+                'category': product.get('category', '')
+            }
+            # Check if already in wishlist
+            if not any(item['name'] == product['name'] for item in app.wishlist):
+                app.wishlist.append(wishlist_item)
+        else:
+            # Remove from wishlist
+            app.wishlist = [item for item in app.wishlist if item['name'] != product['name']]
+        
         print(f"Wishlist after toggle: {app.wishlist}")  # DEBUG
         """
         Toggles the wishlist status for a product at the given index.
@@ -113,15 +280,30 @@ class ProductListScreen(MDScreen):
         app = App.get_running_app()
         app.root.current = 'home'
 
-
     def remove_from_wishlist_by_name(self, product_name):
         """
         Removes a product from the wishlist by its name.
-        Sets the corresponding wishlist entry to False and updates the app's persistent wishlist.
+        Removes the item from the app's wishlist and updates the display.
         """
         app = App.get_running_app()
-        for idx, product in enumerate(self.products):
-            if product['name'] == product_name:
-                app.wishlist[idx] = False
-                self.show_products()
-                break 
+        app.wishlist = [item for item in app.wishlist if item['name'] != product_name]
+        self.show_products()
+
+    def open_cart(self):
+        app = App.get_running_app()
+        app.last_screen = self.manager.current_screen.name
+        self.manager.current = 'cart' 
+
+    def open_product_details(self, product, *args):
+        print(f"Opening details for {product['name']}")  # DEBUG
+        app = App.get_running_app()
+        app.last_screen = self.manager.current
+        details_screen = app.sm.get_screen('product_details')
+        details_screen.set_product(
+            name=product['name'],
+            price=float(product['price'].replace('₹','').replace(',','').replace('.00','')) if isinstance(product['price'], str) else product['price'],
+            images=product.get('images', [product.get('image', '')]),
+            description=product.get('description', 'No description available.'),
+            category=product.get('category', '')
+        )
+        app.sm.current = 'product_details' 

@@ -9,6 +9,9 @@
     elevation: 0
     radius: [12,]
     md_bg_color: 1, 1, 1, 1
+    on_release:
+        print("Card released")  # DEBUG
+        root.on_press_callback() if root.on_press_callback else None
     RelativeLayout:
         size_hint_y: None
         height: self.width  # Make the image area a square

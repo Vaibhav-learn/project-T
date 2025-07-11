@@ -36,7 +36,11 @@ class LoginScreen(MDScreen):
         self.manager.current = 'register'
 
     def go_to_account_prompt(self):
-        self.manager.current = 'account_prompt'
+        app = App.get_running_app()
+        if hasattr(app, 'last_screen') and app.last_screen and app.last_screen != 'login':
+            self.manager.current = app.last_screen
+        else:
+            self.manager.current = 'account_prompt'
 
 class RegisterScreen(MDScreen):
     def show_error(self, message):

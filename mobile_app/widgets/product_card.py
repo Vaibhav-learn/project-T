@@ -7,18 +7,12 @@ class ProductCard(MDCard):
     name = StringProperty()
     price = StringProperty()
     category = StringProperty()
-    on_press_callback = ObjectProperty(None)
+    on_press_callback = ObjectProperty(None, allownone=True)
     is_favorite = BooleanProperty(False)
 
     def __init__(self, **kwargs):
         self.on_favorite_toggle = kwargs.pop('on_favorite_toggle', None)
         super().__init__(**kwargs)
-
-    def on_touch_down(self, touch):
-        if self.collide_point(*touch.pos):
-            if self.on_press_callback:
-                self.on_press_callback(self)
-        return super().on_touch_down(touch)
 
     def toggle_favorite(self):
         print(f"toggle_favorite called for {self.name}, was {self.is_favorite}")  # DEBUG
