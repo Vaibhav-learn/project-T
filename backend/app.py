@@ -11,10 +11,18 @@ CORS(app)
 app.config.from_pyfile('config.py')
 # Initialize database
 db.init_app(app)
+
+@app.route('/')
+def home():
+    return "Authentication & User Management API is running."
+
 # Register blueprints
 app.register_blueprint(cart_bp)
 app.register_blueprint(wishlist_bp)
 app.register_blueprint(order_bp, url_prefix="/api/orders")
+app.register_blueprint(auth_bp, url_prefix='/')  # Don't change this
+app.register_blueprint(user_bp, url_prefix='/')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
