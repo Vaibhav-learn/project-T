@@ -3,4 +3,6 @@ Flask-SQLAlchemy
 Flask-JWT-Extended  # if you add auth
 Flask-CORS
 Flask-Migrate
+python-dotenv
+gunicorn
 pytest

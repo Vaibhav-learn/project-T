@@ -3,6 +3,7 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
+from screens.Splash_Screen import SplashScreen
 from screens.profile_screen import ProfileScreen, AccountPromptScreen
 from screens.orders_screen import OrdersScreen
 from screens.login_screen import LoginScreen, RegisterScreen
@@ -46,7 +47,8 @@ class EcommerceApp(MDApp):
         self.cart = []  # List to store cart items
         
     def build(self):
-        # Load all KV files
+        # Load all KV files from the correct directory
+        Builder.load_file('screens/Splash_Screen.kv')
         Builder.load_file('screens/profile_screen.kv')
         Builder.load_file('screens/orders_screen.kv')
         Builder.load_file('screens/login_screen.kv')
@@ -72,8 +74,10 @@ class EcommerceApp(MDApp):
         Builder.load_file('screens/product_details_screen.kv')
         Builder.load_file('screens/order_summary_screen.kv')
         Builder.load_file('screens/payment_screen.kv')
-        # Create screen manager
+
+        # Create screen manager and add all screens
         self.sm = ScreenManager()
+        self.sm.add_widget(SplashScreen(name='splash'))
         self.sm.add_widget(AccountPromptScreen(name='account_prompt'))
         self.sm.add_widget(LoginScreen(name='login'))
         self.sm.add_widget(RegisterScreen(name='register'))
@@ -92,7 +96,7 @@ class EcommerceApp(MDApp):
         self.sm.add_widget(PolicyDetailScreen(name='policy_detail'))
         self.sm.add_widget(FAQScreen(name='FAQ'))
         self.sm.add_widget(FAQCategoryDetailScreen(name='faq_category_detail'))
-        self.sm.add_widget(HomeScreen(name='home'))
+        self.sm.add_widget(HomeScreen(name='home'))  # <-- This is critical!
         self.sm.add_widget(SearchScreen(name='search'))
         self.sm.add_widget(ProductListScreen(name='product_list'))
         self.sm.add_widget(WishlistScreen(name='wishlist'))
@@ -101,7 +105,8 @@ class EcommerceApp(MDApp):
         self.sm.add_widget(ProductDetailsScreen(name='product_details'))
         self.sm.add_widget(OrderSummaryScreen(name='order_summary'))
         self.sm.add_widget(PaymentScreen(name='payment'))
-        self.sm.current = 'home'
+
+        self.sm.current = 'splash'  # Set after all screens are added
         return self.sm
 
     def go_to_orders(self):
