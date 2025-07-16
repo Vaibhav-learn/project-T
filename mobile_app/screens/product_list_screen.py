@@ -83,6 +83,31 @@ class ProductListScreen(MDScreen):
             'images': ['assets/herbal oils/4.jpg'],
             'description': 'Natural eucalyptus oil for soothing relief and aromatherapy.'
         },
+        #Weight Loss
+        {
+            'name': 'SPL. Arokiya Podi 225g',
+            'category': 'Herbal oils',
+            'price': '₹999',
+            'image': 'assets/weight loss/2.png',
+            'images': ['assets/weight loss/2.png'],
+            'description': 'Helps digestion, reduces bloating, adding to routine that may aid weight loss'
+        },
+        {
+            'name': 'Thiribala Podi / Triphala Powder',
+            'category': 'Herbal oils',
+            'price': '',
+            'image': 'assets/weight loss/3.jpg',
+            'images': ['assets/weight loss/3.jpg'],
+            'description': 'Natural colon cleanser that assists detox and slimming processes'
+        },
+        {
+            'name': 'Karunjeeragam (Black cumin) 100g',
+            'category': 'Herbal oils',
+            'price': '₹50 (from ₹60)',
+            'image': 'assets/weight loss/4.jpg',
+            'images': ['assets/weight loss/4.jpg'],
+            'description': 'Black cumin seeds promote weight loss, reduce diabetes risk, improve metabolism, enhance heart and digestive health, and support sexual wellness.'
+        },
     #   Baby Care
         {
             'name': 'Kaasi Katti (10g)',
@@ -163,6 +188,235 @@ class ProductListScreen(MDScreen):
             'image': 'assets/baby care images/1.jpg',
             'images': ['assets/baby care images/1.jpg'],
             'description': 'A curated combo containing Orasu Marundhu, Paalkayam, Kadukkai, Jathikkai, Maasakkai, Vasambu, and Kaadhola Karugamani—formulated for infants\' overall health.'
+        },
+           
+    # Sugar
+        {
+            'name': 'Thean Kaai 50g ',
+            'category': 'Sugar',
+            'price': '₹80',
+            'image': 'assets/sugar/7.jpg',
+            'images': ['assets/sugar/7.jpg'],
+            'description': 'Promotes digestion and helps regulate blood sugar levels'
+        },
+        {
+            'name': 'Sirukurinjaan Powder ',
+            'category': 'Sugar',
+            'price': '₹50',
+            'image': 'assets/sugar/5.jpg',
+            'images': ['assets/sugar/5.jpg'],
+            'description': 'Promotes digestion and helps regulate blood sugar levels'
+        },
+        {
+            'name': 'Aavaarampoo Powder 50g ',
+            'category': 'Sugar',
+            'price': '₹30',
+            'image': 'assets/sugar/3.jpg',
+            'images': ['assets/sugar/3.jpg'],
+            'description': 'Promotes digestion and helps regulate blood sugar levels'
+        },
+        {
+            'name': 'Naaval Seed Powder 50g',
+            'category': 'Sugar',
+            'price': '₹9',
+            'image': 'assets/sugar/6.jpg',
+            'images': ['assets/sugar/6.jpg'],
+            'description': 'Used traditionally to manage blood sugar, support heart health, and purification.'
+        },
+    #Stomach Pain
+        {
+            'name': 'Paalkaayam 50g',
+            'category': 'Stomach Pain',
+            'price': '₹40',
+            'image': 'assets/stomach pain/5.jpg',
+            'images': ['assets/stomach pain/5.jpg'],
+            'description': 'Gentle herbal laxative—cleanses colon and aids digestion & weight management.'
+        },
+         {
+            'name': 'Ajeeranaa Powder 225g',
+            'category': 'Stomach Pain',
+            'price': '₹625',
+            'image': 'assets/stomach pain/6.png',
+            'images': ['assets/stomach pain/6.png'],
+            'description': 'Gentle herbal laxative—cleanses colon and aids digestion & weight management.'
+        },
+         {
+            'name': 'Attathi Powder 50g',
+            'category': 'Stomach Pain',
+            'price': '₹80',
+            'image': 'assets/stomach pain/7.jpg',
+            'images': ['assets/stomach pain/7.jpg'],
+            'description': 'Gentle herbal laxative—cleanses colon and aids digestion & weight management.'
+        },
+     # Rice & Millets
+        {
+            'name': 'Scool Rice 50g',
+            'category': 'Millets & Rice',
+            'price': '₹80',
+            'image': 'assets/rice/2.jpg',
+            'images':  ['assets/rice/2.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+         {
+            'name': 'Popcorn Sorghum 100g',
+            'category': 'Millets & Rice',
+            'price': '₹15',
+            'image': 'assets/rice/3.jpg',
+            'images':  ['assets/rice/3.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+          {
+            'name': 'Aali Rice 50g',
+            'category': 'Millets & Rice',
+            'price': '₹25',
+            'image': 'assets/rice/4.jpg',
+            'images':  ['assets/rice/4.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+          {
+            'name': 'Maapillai Samba Rice 100g',
+            'category': 'Millets & Rice',
+            'price': '₹15',
+            'image': 'assets/rice/5.jpg',
+            'images':  ['assets/rice/5.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+        {
+            'name': 'Little Millet / Saamai Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹10',
+            'image': 'assets/rice/6.jpg',
+            'images':  ['assets/rice/6.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+         {
+            'name': 'Kaikutthal Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹15',
+            'image': 'assets/rice/7.jpg',
+            'images':  ['assets/rice/7.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+        {
+            'name': 'Kudhiraivali Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹15',
+            'image': 'assets/rice/8.jpg',
+            'images':  ['assets/rice/8.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+        {
+            'name': 'Varau Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹15',
+            'image': 'assets/rice/9.jpg',
+            'images':  ['assets/rice/9.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+        {
+            'name': 'Thinai Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹15',
+            'image': 'assets/rice/10.jpg',
+            'images':  ['assets/rice/10.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+        {
+            'name': 'Forbidden Rice 100g',
+            'category': 'Millets & Rice',
+            'price': '₹25',
+            'image': 'assets/rice/11.jpg',
+            'images':  ['assets/rice/11.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+          {
+            'name': 'pumpkin Seeds 100g',
+            'category': 'Millets & Rice',
+            'price': '₹99',
+            'image': 'assets/rice/12.jpg',
+            'images':  ['assets/rice/12.jpg'],
+            'description': 'Small-grain millet valued for its fiber content and low glycemic impact.'
+        },
+          {
+            'name': 'Sivappu Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹10 ',
+            'image': 'assets/rice/13.jpg',
+            'images': ['assets/rice/13.jpg'] ,
+            'description': 'Unpolished red rice packed with fiber, vitamins B1/B2, iron, antioxidants—promotes heart health, blood sugar management, and weight control.'
+        },
+        {
+            'name': 'Solam / Sorghum 100g',
+            'category': 'Millets & Rice',
+            'price': '₹10',
+            'image': 'assets/rice/20.jpg' ,
+            'description': 'A high-fiber millet alternative to refined flour, rich in protein, iron, potassium, and phosphorus—supports digestion, weight management, cholesterol control, and heart health.'
+        },
+        {
+            'name': 'Bamboo Rice/Moongil Arisi 100g',
+            'category': 'Millets & Rice',
+            'price': '₹80 ',
+            'image': 'assets/rice/18.jpg',
+            'images':  ['assets/rice/18.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+       #sex life
+       {
+            'name': 'Murungai Vithai Powder 50g',
+            'category': 'sex life',
+            'price': '₹90 ',
+            'image': 'assets/sex ife/3.jpg',
+            'images':  ['assets/sex ife/3.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+        {
+            'name': 'Oridhazh Thamarai Powder 50g',
+            'category': 'sex life',
+            'price': '₹40 ',
+            'image': 'assets/sex ife/4.jpg',
+            'images':  ['assets/sex ife/4.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+        {
+            'name': 'Drumstick Flower Powder 50g',
+            'category': 'sex life',
+            'price': '₹90 ',
+            'image': 'assets/sex ife/6.jpg',
+            'images':  ['assets/sex ife/6.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+        {
+            'name': 'Poonaikaali Seed Powder 50g',
+            'category': 'sex life',
+            'price': '₹80 ',
+            'image': 'assets/sex ife/7.jpg',
+            'images':  ['assets/sex ife/7.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+        {
+            'name': 'Kadal Paasi 50g',
+            'category': 'sex life',
+            'price': '₹50 ',
+            'image': 'assets/sex ife/8.jpg',
+            'images':  ['assets/sex ife/8.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+        {
+            'name': 'Black Musli Powder 50g',
+            'category': 'sex life',
+            'price': '₹60 ',
+            'image': 'assets/sex ife/9.jpg',
+            'images':  ['assets/sex ife/9.jpg'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
+        },
+       
+         {
+            'name': 'Atthipalam',
+            'category': 'sex life',
+            'price': '₹2,000 ',
+            'image': 'assets/sex ife/12.png',
+            'images':  ['assets/sex ife/12.png'],
+            'description': 'Nutty, aromatic rice harvested from bamboo inflorescence—rich in nutrients, traditionally used in festive dishes.'
         },
     ])
 

@@ -13,7 +13,7 @@ from kivy.app import App
 from functools import partial
 from screens.product_list_screen import ProductListScreen
 
-# Example categories and products (replace with your real data)
+#categories and products 
 categories =  {
     
     'Baby Care': [
@@ -30,20 +30,6 @@ categories =  {
         ("Vasambu / Sweetflag (2 pieces)", "assets/baby care images/11.jpg"),
         ("Baby Care Combo (1 set)", "assets/baby care images/1.jpg"),
     ],
-    'Bathing': [],
-    'Beauty & Face': [],
-    'Blood Purifier': [],
-    'Body building': [],
-    'Body Heat': [],
-    'Birth Disorders': [],
-    'Cold and Cough': [],
-    'Combos': [],
-    'Essentials': [],
-    'Fever': [],
-    'Hair Problems': [],
-    'Hair Removal': [],
-    'Head Ache': [],
-    'Heart Problems': [],
     'Herbal oils': [
         ("Kaayakalpaa Kit", "assets/herbal oils/1.png"),
         ("Pure Karisalankanni Oil 225ml", "assets/herbal oils/7.png"),
@@ -54,7 +40,58 @@ categories =  {
         ("Karunjeeragam Oil 50ml", "assets/herbal oils/6.jpg"),
         ("Prasava Legiyam 500g", "assets/herbal oils/8.jpg"),
     ],
-    'Joint Pain': [],
+    'Millets & Rice': [
+        ("Scool Rice 50g", "assets/rice/2.jpg"),
+        ("Kaayakalpaa Kit", "assets/herbal oils/1.png"),
+        ("Popcorn Sorghum 100g", "assets/rice/3.jpg"),
+        ("Aali Rice 50g", "assets/rice/4.jpg"),
+        ("Maapillai Samba Rice 100g", "assets/rice/5.jpg"),
+        ("Little Millet / Saamai Arisi 100g", "assets/rice/6.jpg"),
+        ("Kaikutthal Arisi 100g", "assets/rice/7.jpg"),
+        ("Kudhiraivali Arisi 100g", "assets/rice/8.jpg"),
+        ("Varau Arisi 100g", "assets/rice/9.jpg"),
+        ("Thinai Arisi 100g", "assets/rice/10.jpg"),
+        ("Forbidden Rice 100g", "assets/rice/11.jpg"),
+        ("pumpkin Seeds 100g", "assets/rice/12.jpg"),
+        ("Sivappu Arisi 100g", "assets/rice/13.jpg"),
+        ("Solam / Sorghum 100g", "assets/rice/20.jpg"),
+        ("Bamboo Rice/Moongil Arisi 100g", "assets/rice/18.jpg"),
+    ],
+    'Stomach Pain': [
+        ("Kaayakalpaa Kit", "assets/herbal oils/1.png"),
+        ("SPL. Arokiya Podi 225g","assets/weight loss/2.png"),
+        ("Pure Karisalankanni Oil 225ml", "assets/herbal oils/7.png"),
+        ("Thiribala Podi/Triphala Powder","assets/weight loss/3.jpg"),
+        ("Paalkaayam 50g","assets/stomach pain/5.jpg"),
+        ("Ajeeranaa Powder 225g","assets/stomach pain/6.png"),
+        ("Attathi Powder 50g","assets/stomach pain/7.jpg"),
+    ],
+    'Sugar': [
+        ("Kaayakalpaa Kit", "assets/herbal oils/1.png"),
+        ("SPL. Arokiya Podi 225g","assets/weight loss/2.png"),
+        ("Pure Karisalankanni Oil 225ml", "assets/herbal oils/7.png"),
+        ("Thean Kaai 50g ", "assets/sugar/7.jpg"),
+        ("Sirukurinjaan Powder ", "assets/sugar/5.jpg"),
+        ("Aavaarampoo Powder 50g ", "assets/sugar/3.jpg"),
+        ("Naaval Seed Powder 50g", "assets/sugar/6.jpg"),
+    ],
+    'Weight Loss' :[
+        ("Kaayakalpaa Kit", "assets/herbal oils/1.png"),
+        ("SPL. Arokiya Podi 225g","assets/weight loss/2.png"),
+        ("Thiribala Podi/Triphala Powder","assets/weight loss/3.jpg"),
+        ("Karunjeeragam 100g","assets/weight loss/4.jpg"),
+    ],
+    'sex life' :[
+        ("Kaayakalpaa Kit", "assets/herbal oils/1.png"),
+        ("Murungai Vithai Powder 50g","assets/sex ife/3.jpg"),
+        ("SPL. Arokiya Podi 225g","assets/weight loss/2.png"),
+        ("Oridhazh Thamarai Powder 50g","assets/sex ife/4.jpg"),
+        ("Drumstick Flower Powder 50g","assets/sex ife/6.jpg"),
+        ("Poonaikaali Seed Powder 50g","assets/sex ife/7.jpg"),
+        ("Kadal Paasi 50g","assets/sex ife/8.jpg"),
+        ("Black Musli Powder 50g","assets/sex ife/9.jpg"),
+        ("Atthipalam","assets/sex ife/12.png"),
+    ]
 
     # ... add more categories as needed ...
 }
