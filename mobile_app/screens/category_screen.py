@@ -433,7 +433,7 @@ If you're eating outside food, make sure you definitely use the Arokiya Podi, es
 
 Avoiding that and taking this regularly can help you control conditions like:
 Diabetes, Piles, High Blood Pressure, Hypertension, Heart Problems, Cholesterol, and more.""",4320.00,3376.00),
-                 ("Kasi/Kaasi Katti 10g", "C:/Users/shiv shanker/OneDrive\Desktop/all image paths/baby care images/Kaasi-Katti-scaled-1-1-300x300.jpg","""Description
+                ("Kasi/Kaasi Katti 10g", "C:/Users/shiv shanker/OneDrive\Desktop/all image paths/baby care images/Kaasi-Katti-scaled-1-1-300x300.jpg","""Description
 Kasi Katti is a resin or extract which is manufactured from Acacia catechu heartwood. Acacia catechu possesses various medicinal properties, therefore it is used in Ayurvedic medicines that treat many diseases.
 
 Kaasi Katti is generally used in the treatment of asthma, cough, colitis, diarrhea, dysentery, skin boils, and sores.
@@ -620,7 +620,7 @@ Even today, during the Varalakshmi Puja, when decorating the deity Mahalakshmi, 
 The Kaadhani consists of a rolled pale red palm leaf inserted through a small black bead, forming a simple yet culturally rich earring.""",80.00,60.00),
     ],
     "Bathing":[
-             ("Kayakalpa/Kaayakalpaa Kit 225g Each","C:/Users/shiv shanker/OneDrive/Desktop/all image paths/bathing products/Kaayakalpaa-Kit-Intro-300x300.png","""Description
+            ("Kayakalpa/Kaayakalpaa Kit 225g Each","C:/Users/shiv shanker/OneDrive/Desktop/all image paths/bathing products/Kaayakalpaa-Kit-Intro-300x300.png","""Description
 KAAYAKALPAA KIT ✨
 Contains:
 SPL. Arokiya Podi, SPL. Ashwagandha Podi, Paarvai Podi, and Food-Grade Karisalankanni Oil.
@@ -723,7 +723,7 @@ It Helps your Baby Relax
 It Develops Cognitive skills""",80.00,60.00),
         ],
     "Beauty & Face":[
-             ("Kayakalpa/Kaayakalpaa Kit 225g Each","C:/Users/shiv shanker/OneDrive/Desktop/all image paths/bathing products/Kaayakalpaa-Kit-Intro-300x300.png","""Description
+            ("Kayakalpa/Kaayakalpaa Kit 225g Each","C:/Users/shiv shanker/OneDrive/Desktop/all image paths/bathing products/Kaayakalpaa-Kit-Intro-300x300.png","""Description
 KAAYAKALPAA KIT ✨
 Contains:
 SPL. Arokiya Podi, SPL. Ashwagandha Podi, Paarvai Podi, and Food-Grade Karisalankanni Oil.
