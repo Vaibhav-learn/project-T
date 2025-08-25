@@ -2,6 +2,8 @@
 
 A modern and sleek user profile section for a mobile e-commerce application built with Python and KivyMD.
 
+**Project developed by a team of 6 members, led by Vaibhav Balwant Singh as the Project Leader.**
+
 ## Features
 
 - Modern and responsive UI design
@@ -77,4 +79,4 @@ python main.py
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -5639,7 +5639,7 @@ This oil is carefully processed by blending fresh Karisalankanni extract with fi
 
 It’s noteworthy that Karisalankanni is also a key ingredient in the making of “Thangapashpam”, a traditional rejuvenating formulation.""",3000.00,2120.00),
             ("Aavaarampoo Powder/Avarampoo Podi 50g","C:/Users/shiv shanker/OneDrive/Desktop/all image paths/sugar/3.jpg","""Description
-              Description
+            Description
 Benefits of Aavaaram poo:
 Aavaarampoo for diabetes:
 Aavaaram flowers have cooling and dehydrating effects. Aavaarampoo juice is also effective for diabetic people. The properties of this plant help to reduce the sugar level in the blood effectively.
